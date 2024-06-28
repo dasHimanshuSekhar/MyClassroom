@@ -34,12 +34,12 @@ public class AdminServiceImpl implements AdminService{
             }
             // Email Id
             if(adminRepository.existsByEmailId(adminRegistrationReq.getEmailId())){
-                logger.warn("admin_registration :: Email Id Already Exists :: userId: {}", adminRegistrationReq.getAdminId());
+                logger.warn("admin_registration :: Email Id '{}' Already Exists :: userId: {}", adminRegistrationReq.getEmailId(), adminRegistrationReq.getAdminId());
                 return new AdminRegistrationRes(null,-1, "Admin Already exist with this Email Id: " + adminRegistrationReq.getEmailId());
             }
             // Mobile Number
             if(adminRepository.existsByMobileNumber(adminRegistrationReq.getMobileNumber())){
-                logger.warn("admin_registration :: Mobile Number Already Exists :: userId: {}", adminRegistrationReq.getAdminId());
+                logger.warn("admin_registration :: Mobile Number '{}' Already Exists :: userId: {}", adminRegistrationReq.getMobileNumber(), adminRegistrationReq.getAdminId());
                 return new AdminRegistrationRes(null,-1, "Admin Already exist with this Mobile Number: " + adminRegistrationReq.getMobileNumber());
             }
 

@@ -1,12 +1,10 @@
 package com.myclassroom.classroom.services;
 
 import com.myclassroom.classroom.enity.Teacher;
-import com.myclassroom.classroom.pojo.AdminRegistrationRes;
 import com.myclassroom.classroom.pojo.TeacherRegistrationReq;
 import com.myclassroom.classroom.pojo.TeacherRegistrationRes;
 import com.myclassroom.classroom.repo.TeacherRepository;
 import com.myclassroom.classroom.utils.GeneralConstants;
-import net.bytebuddy.asm.Advice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -28,26 +26,26 @@ public class TeacherServiceImpl implements TeacherService {
         try{
             // Duplicate Checked
             Optional<Teacher> teacherOptional = teacherRepository.findById(teacherRegistrationReq.getTeacherId());
-            // Admin
+            // Teacher
             if(teacherOptional.isPresent()){
                 logger.warn("teacher_registration :: Teacher User Id Already Exists :: userId: {}", teacherRegistrationReq.getTeacherId());
                 return new TeacherRegistrationRes(null,-1, "Teacher Already exist with userId: " + teacherRegistrationReq.getTeacherId());
             }
             // Email Id
             if(teacherRepository.existsByEmailId(teacherRegistrationReq.getEmailId())){
-                logger.warn("teacher_registration :: Email Id Already Exists :: userId: {}", teacherRegistrationReq.getTeacherId());
+                logger.warn("teacher_registration :: Email Id '{}' Already Exists :: userId: {}", teacherRegistrationReq.getEmailId(), teacherRegistrationReq.getTeacherId());
                 return new TeacherRegistrationRes(null,-1, "Teacher Already exist with this Email Id: " + teacherRegistrationReq.getEmailId());
             }
             // Mobile Number
             if(teacherRepository.existsByMobileNumber(teacherRegistrationReq.getMobileNumber())){
-                logger.warn("teacher_registration :: Email Id Already Exists :: userId: {}", teacherRegistrationReq.getTeacherId());
-                return new TeacherRegistrationRes(null,-1, "Teacher Already exist with this Email Id: " + teacherRegistrationReq.getEmailId());
+                logger.warn("teacher_registration :: Mobile number '{}' Already Exists :: userId: {}", teacherRegistrationReq.getMobileNumber(), teacherRegistrationReq.getTeacherId());
+                return new TeacherRegistrationRes(null,-1, "Teacher Already exist with this mobile Number: " + teacherRegistrationReq.getMobileNumber());
             }
 
             /* Teacher Entity Preparation */
             Teacher teacher = new Teacher();
             teacher.setTeacherId(teacherRegistrationReq.getTeacherId());
-            teacher.setPassword(teacherRegistrationReq.getMobileNumber());
+            teacher.setPassword(teacherRegistrationReq.getPassword());
             teacher.setFirstName(teacherRegistrationReq.getFirstName());
             teacher.setLastName(teacherRegistrationReq.getLastName());
             teacher.setEmailId(teacherRegistrationReq.getEmailId());

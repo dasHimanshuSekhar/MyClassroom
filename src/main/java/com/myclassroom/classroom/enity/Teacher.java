@@ -17,7 +17,7 @@ public class Teacher {
     @Id
     @Column(unique = true, nullable = false)
     private String teacherId;
-    private Long password;
+    private String password;
     private String firstName;
     private String lastName;
     @Column(unique = true, nullable = false)

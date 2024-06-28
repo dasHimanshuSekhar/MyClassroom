@@ -9,6 +9,6 @@ import lombok.Data;
 public class StudentRegistrationRes {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String studentUserId;
-    private String statusCode;
+    private Integer statusCode;
     private String statusDesc;
 }
