@@ -26,26 +26,26 @@ public class AdminServiceImpl implements AdminService{
     public AdminRegistrationRes registerAdmin(AdminRegistrationReq adminRegistrationReq) {
         try{
             // Duplicate Checked
-            Optional<Admin> adminOptional = adminRepository.findById(adminRegistrationReq.getUserId());
+            Optional<Admin> adminOptional = adminRepository.findById(adminRegistrationReq.getAdminId());
             // Admin
             if(adminOptional.isPresent()){
-                logger.warn("admin_registration :: Admin User Id Already Exists :: userId: {}", adminRegistrationReq.getUserId());
-                return new AdminRegistrationRes(null,-1, "Admin Already exist with userId: " + adminRegistrationReq.getUserId());
+                logger.warn("admin_registration :: Admin User Id Already Exists :: userId: {}", adminRegistrationReq.getAdminId());
+                return new AdminRegistrationRes(null,-1, "Admin Already exist with userId: " + adminRegistrationReq.getAdminId());
             }
             // Email Id
             if(adminRepository.existsByEmailId(adminRegistrationReq.getEmailId())){
-                logger.warn("admin_registration :: Email Id Already Exists :: userId: {}", adminRegistrationReq.getUserId());
+                logger.warn("admin_registration :: Email Id Already Exists :: userId: {}", adminRegistrationReq.getAdminId());
                 return new AdminRegistrationRes(null,-1, "Admin Already exist with this Email Id: " + adminRegistrationReq.getEmailId());
             }
             // Mobile Number
             if(adminRepository.existsByMobileNumber(adminRegistrationReq.getMobileNumber())){
-                logger.warn("admin_registration :: Mobile Number Already Exists :: userId: {}", adminRegistrationReq.getUserId());
+                logger.warn("admin_registration :: Mobile Number Already Exists :: userId: {}", adminRegistrationReq.getAdminId());
                 return new AdminRegistrationRes(null,-1, "Admin Already exist with this Mobile Number: " + adminRegistrationReq.getMobileNumber());
             }
 
             /* Admin Entity Preparation */
             Admin admin = new Admin();
-            admin.setAdminId(adminRegistrationReq.getUserId());
+            admin.setAdminId(adminRegistrationReq.getAdminId());
             admin.setPassword(adminRegistrationReq.getPassword()); // need to encrypt later
             admin.setFirstName(adminRegistrationReq.getFirstName());
             admin.setLastName(adminRegistrationReq.getLastName());
@@ -56,10 +56,10 @@ public class AdminServiceImpl implements AdminService{
             adminRepository.save(admin);
 
         } catch (Exception e) {
-            logger.error("admin_registration :: {} :: Error: '{}'", GeneralConstants.DATABASE_EXCEPTION, e.getMessage());
+            logger.error("admin_registration :: {} :: Exception: '{}'", GeneralConstants.DATABASE_EXCEPTION, e.getMessage());
             return new AdminRegistrationRes(null, -1, GeneralConstants.DATABASE_EXCEPTION);
         }
 
-        return new AdminRegistrationRes(adminRegistrationReq.getUserId(),0,":: Admin Registration Success");
+        return new AdminRegistrationRes(adminRegistrationReq.getAdminId(),0,"New Admin Onboarded Successfully");
     }
 }

@@ -23,7 +23,7 @@ public class Admin {
     @Column(unique = true, nullable = false)
     private String emailId;
     @Column(unique = true, nullable = false)
-    private String mobileNumber;
+    private Long mobileNumber;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 
