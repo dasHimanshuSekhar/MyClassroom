@@ -1,12 +1,14 @@
 package com.myclassroom.classroom.controller;
 
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomePage {
 
-    @GetMapping("test")
+    @GetMapping("home_page")
     public String test(){
-        return " It's working !";
+        return "My Classroom Homepage !";
     }
 }
