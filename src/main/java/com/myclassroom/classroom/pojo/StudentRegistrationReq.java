@@ -1,9 +1,8 @@
 package com.myclassroom.classroom.pojo;
 
-import lombok.Data;
-
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import lombok.Data;
 
 @Data
 public class StudentRegistrationReq {
@@ -18,7 +17,6 @@ public class StudentRegistrationReq {
     private String lastName;
     @NotEmpty(message = "Email is Mandatory !")
     private String emailId;
-    @NotEmpty(message = "Mobile Number is Mandatory !")
     private Long mobileNumber;
 
 }

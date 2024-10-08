@@ -7,7 +7,7 @@ import javax.validation.constraints.Pattern;
 
 @Data
 public class AdminRegistrationReq {
-    @NotEmpty(message = "User Id is Mandatory !")
+    @NotEmpty(message = "Admin User Id Id is Mandatory !")
     private String adminId;
     @NotEmpty(message = "Password is Mandatory !")
     @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}", message = "Password must be 8 digit of Alphabets, Numbers, and Special Character")
@@ -18,6 +18,6 @@ public class AdminRegistrationReq {
     private String lastName;
     @NotEmpty(message = "Email is Mandatory !")
     private String emailId;
-    @NotEmpty(message = "Mobile Number is Mandatory !")
+//    @NotEmpty(message = "Mobile Number is Mandatory !")
     private Long mobileNumber;
 }
