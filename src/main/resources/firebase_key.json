@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "casendra-database",
+  "private_key_id": "2189f94acf6826fb6cba45c37957ab3578eb64c3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDsXORKj0urzx8e\n0iw26/PFFd/5I8Va+W1faMZTAvnw8jOKW2Ss5iLKAO67t49Sg3a7kUIPKQ49NdHG\n9jbrvoPV4CakA2U6fP3d0ANQfCzG/Ea1Pr1tOn3G6aVkOU9cWPUbJFFENXWbjoMR\nBvEr6whi5kvprYMN1uGiW7X9t8G8toVpZfEq4DE9ei//4VHpgL9x8Olw9oSPDwvu\nP6KW7IuOZFfh8MBPVseBN78WPa1Kjvd2dPq5Vj4IknBcewW2LXio/mwNkRBQHAzN\n5M/XQaxPCk6/Zxe9wkqlKL7rrGT8hy2gsxD6DegPvxmLVhsEiHV49K+Wum46c45u\n6KMDn/9HAgMBAAECggEABQ+q0Rs8aD4T0S8i7zzM3X2DFuyjKeLewATtqj1ivhFm\n9SF73bqX0seDqoAFu6NBBEcvU5pyHvFraofp09EiiuPf2pyQAFlI06/D7RHw9i8q\nEcYkJutHt4itQqDPiDoHauteKh29mkp07VppXk1hbUINLMB1u/LL+2lcqPAptTFm\nJLGD5WdQPfUEnZUVyvhiyBA/6DROzJx+mfVQsamBLprw/oioWZVTYEVG0X2dNnz2\nAVbGosMl+syeqCCtQiVGs8K79IqXP/mkcfqMlmtRwyyT5P7gDERqGf4BQKmbjg+X\nA827DfxVijxmUqpM8+j+HP+OZvm9P/knYaiWns9i0QKBgQD6FAee8499wwL8Cd10\nGx1lVhQ3Fq3EhCUV1nOKAeaNf/Ku7kpPwaJE72fdxP+3mlq/RjnK8PCEfPKARjok\nRsNWr98FOu0p+53/qe4fHE/0N4HB01u6qmP6ptBb8lTV88dHF+hNiioaAv+lAaEs\nYwOptnU9smw5d4he+FlIH7SycwKBgQDx9bg1eAl/zanvBGuYt/pxf6RFygJlJmf6\nBg6AJD/4cSxKbk1BkO0hG5rHZRuoUodQdOxDU1JAq2DrNSTHI068eoCfv8/XRKQp\nbKE2ktQDCdm3Umzzq4vZ1LvDK+YNVMsi2DFABdTPpf54uMeb5OdMy47Bkwps4OJN\nt/6VAq/G3QKBgQDK5zF/wHJuQanMQVzS9aUWMY9ZWydGSUmlvEgmc4BS0rtfP6w/\npgY5FF4by9kHaU+z3hDKHk+nz5EajuBhyqB3V18GaVdANw1tAL1ZtKkSp266ivjk\nLZfNKUfpMmeu6IqJnlY3g6DBVimCAh55WyT/sDDUDE5PGjMliy81m7QLDQKBgQDw\nerfK7LMEQvRSiqIl9zUC+Unb0xruTW2qIbrnwR+TXWgX0ekW8WO9NCJxaxxB/0Rd\nwtfPUlC91ZdOLlOPWJg428ha/dkkqyQ9x6mzA9uT6YZpnZKL3EPzDGxRXqAXP99l\nklngt+r7No/kjEJXvvnkaaxI2EvUSu6hL+3nS/RIQQKBgEsKuIfJJ+VVOPbq4D72\nIFLIXqK4ByWK4fYdAMp3uFomtMs0GxuRetvOQBbieWn93WHlEEoLj5PCTFN5UD8h\nx1TKorEYqWkB76nXGCZdojLwZ7FPttALyhrAMQL/cecLjLo/NXLyqs1g9WOrApeJ\n+oeD+QoDIiEDsEQeL+lDgpkB\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-x5hx9@casendra-database.iam.gserviceaccount.com",
+  "client_id": "115966799418421918706",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-x5hx9%40casendra-database.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

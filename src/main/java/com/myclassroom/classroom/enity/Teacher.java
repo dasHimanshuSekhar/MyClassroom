@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Table(name = "teacher")
@@ -24,8 +24,8 @@ public class Teacher {
     private Long mobileNumber;
     @Column(unique = true, nullable = false)
     private String emailId;
-    private LocalDateTime createdDate;
-    private LocalDateTime updatedDate;
+    private Timestamp createdDate;
+    private Timestamp updatedDate;
 
     @ManyToMany
     @JoinTable(
