@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -24,8 +25,8 @@ public class Student {
     private Long mobileNumber;
     @Column(unique = true, nullable = false)
     private String emailId;
-    private LocalDateTime createdDate;
-    private LocalDateTime updatedDate;
+    private Timestamp createdDate;
+    private Timestamp updatedDate;
 
     @ManyToMany(mappedBy = "students", cascade = CascadeType.ALL)
     private List<Teacher> teachers;
