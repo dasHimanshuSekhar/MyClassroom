@@ -102,11 +102,11 @@
 		</dependency>
 
 <!--		<dependency>-->
-<!--			<groupId>com.google.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-gcp-starter-data-firestore</artifactId>-->
-<!--			<version>5.6.1</version>-->
-<!--			<scope>runtime</scope>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-gcp-starter-secretmanager</artifactId>-->
+<!--			<version>1.2.6.RELEASE</version>-->
 <!--		</dependency>-->
+
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-gcp-data-firestore -->
 		<dependency>
