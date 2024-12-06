@@ -1,4 +1,4 @@
-package com.myclassroom.classroom.enity;
+package com.myclassroom.classroom.entity;
 
 import javax.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity

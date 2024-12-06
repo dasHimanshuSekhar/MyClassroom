@@ -1,4 +1,4 @@
-package com.myclassroom.classroom.enity;
+package com.myclassroom.classroom.entity;
 
 import javax.persistence.*;
 import lombok.AllArgsConstructor;

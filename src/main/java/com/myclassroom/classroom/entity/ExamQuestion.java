@@ -1,4 +1,4 @@
-package com.myclassroom.classroom.enity;
+package com.myclassroom.classroom.entity;
 
 import javax.persistence.*;
 
@@ -6,7 +6,6 @@ import com.vladmihalcea.hibernate.type.array.ListArrayType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 import java.util.List;

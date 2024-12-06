@@ -1,11 +1,13 @@
-package com.myclassroom.classroom.enity;
+package com.myclassroom.classroom.entity;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Table(name = "admin")
@@ -24,11 +26,13 @@ public class Admin {
     private String emailId;
     @Column(unique = true, nullable = false)
     private Long mobileNumber;
-    private Timestamp createdDate;
-    private Timestamp updatedDate;
+    private LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
 
     @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Student> students;
     @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Teacher> teachers;
 }

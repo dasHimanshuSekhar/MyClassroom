@@ -1,56 +1,38 @@
 package com.myclassroom.classroom.services;
 
-import com.google.cloud.firestore.*;
-import com.myclassroom.classroom.enity.Admin;
+import com.myclassroom.classroom.entity.Admin;
 import com.myclassroom.classroom.pojo.AdminRegistrationReq;
 import com.myclassroom.classroom.pojo.AdminRegistrationRes;
+import com.myclassroom.classroom.pojo.projection.AdminOnboardVerification;
+import com.myclassroom.classroom.repository.AdminRepository;
 import com.myclassroom.classroom.utils.GeneralConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class AdminServiceImpl implements AdminService{
     Logger logger = LoggerFactory.getLogger(AdminServiceImpl.class);
-    private final Firestore firestore;
+    final private AdminRepository adminRepository;
 
-
-    public AdminServiceImpl(Firestore firestore) {
-        this.firestore = firestore;
+    public AdminServiceImpl(AdminRepository adminRepository) {
+        this.adminRepository = adminRepository;
     }
 
     @Override
     public AdminRegistrationRes registerAdmin(AdminRegistrationReq adminRegistrationReq) {
         try{
-            // Reference to the admins collection
-            CollectionReference adminCollection = firestore.collection("admins");
-
             // Check for duplicate user ID
-            DocumentReference docRef = adminCollection.document(adminRegistrationReq.getAdminId());
-            if (docRef.get().get().exists()) {
-                logger.warn("admin_registration :: Admin User Id Already Exists :: userId: {}", adminRegistrationReq.getAdminId());
-                return new AdminRegistrationRes(null, -1, "Admin already exists with userId: " + adminRegistrationReq.getAdminId());
-            }
-
+//            Optional<AdminOnboardVerification> admin = adminRepository.verifyAdminOnboardDetails(adminRegistrationReq.getAdminId(), adminRegistrationReq.getMobileNumber(), adminRegistrationReq.getEmailId());
+//            if(admin.isPresent()){
+//
+//            }
             // Check for duplicate email ID
-            Query emailQuery = adminCollection.whereEqualTo("emailId", adminRegistrationReq.getEmailId());
-            QuerySnapshot emailSnapshot = emailQuery.get().get();
-            if(!emailSnapshot.isEmpty()){
-                logger.error("Duplicate email ID found: {}", adminRegistrationReq.getEmailId());
-                return new AdminRegistrationRes(null, -1, "Email ID already exists");
-            }
 
             // Check for duplicate mobile number
-            Query mobileQuery = adminCollection.whereEqualTo("mobileNumber", adminRegistrationReq.getMobileNumber());
-            QuerySnapshot mobileSnapshot = mobileQuery.get().get();
-            if (!mobileSnapshot.isEmpty()) {
-                logger.error("Duplicate mobile number found: {}", adminRegistrationReq.getMobileNumber());
-                return new AdminRegistrationRes(null, -1, "Mobile number already exists");
-            }
-
 
             /* Admin Entity Preparation */
             Admin admin = new Admin();
@@ -60,12 +42,12 @@ public class AdminServiceImpl implements AdminService{
             admin.setLastName(adminRegistrationReq.getLastName());
             admin.setEmailId(adminRegistrationReq.getEmailId());
             admin.setMobileNumber(adminRegistrationReq.getMobileNumber());
-            admin.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
-            admin.setUpdatedDate(Timestamp.valueOf(LocalDateTime.now()));
+            admin.setCreatedDate(LocalDateTime.now());
+            admin.setUpdatedDate(LocalDateTime.now());
 
-            // Save Admin to Firestore
-            WriteResult writeResult = adminCollection.document(adminRegistrationReq.getAdminId()).set(admin).get();
-            logger.info("Admin successfully registered: {}", writeResult.getUpdateTime());
+            // Save Admin
+            adminRepository.save(admin);
+            logger.info("Admin successfully registered: {}", admin.getAdminId());
 
         } catch (Exception e) {
             logger.error("admin_registration :: {} :: Exception: '{}'", GeneralConstants.DATABASE_EXCEPTION, e.getMessage());

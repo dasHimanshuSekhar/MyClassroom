@@ -1,11 +1,11 @@
-package com.myclassroom.classroom.enity;
+package com.myclassroom.classroom.entity;
 
 import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Table(name = "teacher")
@@ -24,8 +24,8 @@ public class Teacher {
     private Long mobileNumber;
     @Column(unique = true, nullable = false)
     private String emailId;
-    private Timestamp createdDate;
-    private Timestamp updatedDate;
+    private LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
 
     @ManyToMany
     @JoinTable(
