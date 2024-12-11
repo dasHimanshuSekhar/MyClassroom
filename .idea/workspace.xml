@@ -5,29 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="860c8763-f8ff-4c4d-b78d-6bfd91521f33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/pojo/projection/AdminOnboardVerification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/repository/AdminRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/my-classroom-443609-49259e886c7b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/MyClassroomApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/MyClassroomApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/config/FirebaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/config/DBConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/AssignmentAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/AssignmentAnswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/AssignmentQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/AssignmentQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/ExamAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/ExamAnswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/ExamDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/ExamDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/ExamQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/ExamQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/enity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/entity/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/services/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/services/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/services/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/services/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/services/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/services/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/config/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/config/DBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/controller/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/controller/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/utils/GeneralConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myclassroom/classroom/utils/GeneralConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/firebase_key.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,38 +58,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MyClassroomApplication.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #2.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Classroom [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Classroom [install].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MyClassroomApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;staging&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CODE/Spring Boot/My Classroom&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MyClassroomApplication.executor": "Run",
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "Maven.Classroom [clean].executor": "Run",
+    "Maven.Classroom [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.MyClassroomApplication.executor": "Run",
+    "git-widget-placeholder": "staging",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/CODE/Spring Boot/My Classroom/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.myclassroom.classroom.pojo" />
       <recent name="com.myclassroom.classroom.services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CODE\Spring Boot\My Classroom\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.myclassroom.classroom.exception" />
